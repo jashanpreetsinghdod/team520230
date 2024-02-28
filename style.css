@@ -226,6 +226,7 @@ body {
 
 #heroleft button {
     pointer-events: all;
+    curson:pointer;
     padding: .3vw 2vw;
     font-size: 3.5vw;
     margin-top: 2vw;
