@@ -1,0 +1,624 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "gilroy";
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+#main{
+    width: 100%;
+    height: 100vh;
+
+}
+.back{
+    pointer-events: all;
+    position:fixed;
+    width: 100%;
+    height: 100vh;
+    background-color:whitesmoke;
+}
+
+.back img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+
+
+#top {
+    pointer-events: none;
+    position: absolute;
+    width: 100%;
+
+}
+
+#focusbar{
+    z-index: 999;
+    position: absolute;
+    height: 417vh;
+    width: 100%;
+    background-color: rgba(56, 56, 56, 0.697);
+    margin-top: 130px;
+    display: none;
+}
+
+#navright input{
+    padding: 5px;
+    border-radius: 8px;
+}
+
+#dataelem{
+    position: relative;
+    
+    height: 40px;
+    width:100%;
+    margin-left:3px ;
+    margin-left: 3px;
+    margin-top: 3px;
+    border-bottom: 1px solid black;
+    color: white;
+    padding: 5px 5px;
+}
+
+#icons{
+    display: flex;
+    align-items: center;
+}
+
+#searchdata{
+    z-index: 9999;
+    position: absolute;
+    pointer-events: all;
+    
+    flex-direction: column;
+    width: 230px;
+    height: fit-content;
+    max-height: 260px;
+    overflow: scroll;
+    background-color: #2e2e2e;
+   backdrop-filter: blur(30px);
+    /* right: 350px; */
+    top:85px ;
+    border-radius: 20px;
+    padding: 5px 0px;
+    align-items: center;
+    display: none;
+}
+
+#searchdata::-webkit-scrollbar{
+    display: none;
+}
+
+#cart{pointer-events: all;
+    position: absolute;
+    z-index: 99;
+    right: 150px;
+    top:100px;
+    border-radius: 20px;
+    width: 22%;
+    height: fit-content;
+    background-color: #2e2e2e;
+    backdrop-filter: blur(90px);
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    /* padding: 20px 20px; */
+}
+
+#cartelem{
+    position: relative;
+    background-color: rgb(156, 156, 156);
+    width: 90%;
+    height: 80px ;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+
+    padding-bottom: 3px;
+    border-radius: 8px;
+    align-items:center;
+    padding: 5px 5px;
+    margin-bottom: 4px;
+    margin-top: 4px;
+}
+
+#cartelem img{
+    left: 0;
+   height:78px;
+}
+
+#fontcart{
+    display: flex;
+    flex-direction: column;
+}
+
+#cartelem p{
+    font-size: 22px;
+    font-weight: 500;
+    margin-bottom: 0%;
+}
+
+#workingarea {
+    position: relative;
+    margin: auto 0;
+    width: 80%;
+   
+    max-width: 1920px;
+    
+    margin: auto;
+}
+
+#navbar {
+    pointer-events: all;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 10px 0;
+
+}
+
+#navleft img {
+    height: 110px;
+    background-color: black;
+    border-radius: 50%;
+}
+
+#navleft,
+#navright {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+
+
+
+}
+#navright i{
+    cursor: pointer;
+    pointer-events: all;
+    font-size: 30px;
+}
+
+#navbar #anchorr {
+    pointer-events: all;
+    text-decoration: none;
+    font-family: "gilroy";
+    font-weight: 600;
+    color: black;
+    font-size: 13px;
+    /* background-color: aliceblue; */
+
+    backdrop-filter: blur(40px);
+    padding: 6px 6px;
+    border:0.5px solid gray;
+    border-radius: 10px;
+    box-shadow: 0px 0px 100px black;
+
+
+}
+
+
+
+
+
+.closes:hover {
+    cursor: pointer;
+}
+
+#sidebar img {
+    border-radius: 50%;
+    width: 20%;
+    margin-top: 20px;
+    margin-bottom: 15px;
+}
+
+#sidebar {
+    pointer-events: all;
+    z-index: 999;
+    position: fixed;
+    height: 100vh;
+    width: 40%;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    top: 0;
+    right: 0;
+    background-color: rgba(255, 255, 255, 0.651);
+    backdrop-filter: blur(10px);
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+    box-shadow: -10px 0px 25px rgb(0, 0, 0);
+    animation-name: jashan;
+    animation-duration: 0.4s;
+
+}
+@keyframes jashan {
+    from{right: -40%;}
+    to{right:0}
+}
+
+
+
+#sidebar #used {
+    position: relative;
+    width: 100%;
+    color: black;
+    text-decoration: none;
+    padding: 20px 0px;
+    font-size: 18px;
+    border-radius: 5px;
+    font-weight: 700;
+}
+
+#sidebar a:hover {
+    background-color: rgba(0, 0, 0, 0.074);
+    box-shadow: 0px 0px 100px rgba(0, 0, 0, 0.378);
+    transition-property: box-shadow, background-color;
+    transition-duration: 0.5s;
+    transition-timing-function: ease-in-out;
+
+
+}
+
+.open {
+    color: white;
+    background-color: rgba(255, 255, 255, 0.168);
+    pointer-events: all;
+    /* background: none; */
+    border: none;
+    font-weight: 900;
+    border-radius: 8px;
+    padding: 0px 0px;
+}
+
+.closes {
+    color: white;
+    background-color: rgba(255, 255, 255, 0.168);
+    pointer-events: all;
+    /* background: none; */
+    border: none;
+    font-weight: 900;
+    border-radius: 8px;
+    padding: 0px 0px;
+    margin-top: 18px;
+    align-self: first baseline;
+    margin-left: 18px;
+}
+    
+.open:hover {
+    cursor: pointer;
+}
+
+
+
+#top-image{
+    display: flex;
+    flex-direction: row;
+    left: 0px;
+    width: 100%;
+    pointer-events: all;
+    
+}
+
+
+#top-image h2{
+    color:transparent;
+    -webkit-text-stroke: 1.5px black;
+    font-size: 150px;
+    margin-left: 10px;
+    font-family: "kajiro";
+    letter-spacing: 7px;
+}
+
+#top-image h2:hover{
+    z-index: 999;
+    color: black;
+    transition: 0.5s;
+}
+
+#top-image h2::selection{
+    color:white;
+    background-color: black;
+}
+
+#right-image{
+    padding-top: 20px;
+    display: flex;
+    flex-direction: row-reverse;
+    left: 0px;
+    width: 100%;
+    pointer-events: all;
+}
+
+
+#right-image h2{
+    color:transparent;
+    -webkit-text-stroke: 1.5px black;
+    font-size: 150px;
+    margin-right: 10px;
+    font-family: "kajiro";
+    letter-spacing: 7px;
+   
+}
+
+#right-image h2:hover{
+    z-index: 999;
+    color:black;
+    transition: 0.2s;
+}
+
+#right-image h2::selection{
+    color:white;
+    background-color: black;
+}
+
+#mycards{
+    height: 90vh;
+    overflow: scroll;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+#mycard{
+    /* height: 45vh; */
+    width: 34vh;
+    /* background-color: rgba(240, 248, 255, 0.196);
+    backdrop-filter: blur(9px); */
+    cursor: pointer;
+    padding: 20px 15px;
+    display: flex;
+    flex-direction: column;
+    pointer-events: all;
+}
+
+#mycard button{
+    pointer-events: all;
+    width: fit-content;
+    margin: auto;
+    margin-right: 0.5vh;
+    color: white;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: 700;
+    border: none;
+    background-color: #0f1114c8;
+}
+
+#mycard h5,h6{
+    font-family:sans-serif;
+    letter-spacing: 0vh;
+    margin: auto 0;
+    margin-left: 0.7vh;
+    margin-top: 0.9vh;
+    font-weight: 700;
+
+}
+
+#cardpic{
+    position: relative;
+    object-fit:cover;
+    /* width: 100%; */
+    height: 100%;
+    cursor:zoom-in;
+    filter: drop-shadow(0px 0px 0px rgba(0, 0, 0, 0));
+    transition: filter 0.2s ease;
+    /* margin-top: 20px; */
+    
+}
+
+#mycards::-webkit-scrollbar{
+    display: none;
+}
+
+.anima{
+    position: relative;
+    object-fit:cover;
+    left: auto;
+    width: 100%;
+    height: 100%;
+    cursor:zoom-in;
+}
+
+
+
+#mycard img:hover{  
+    filter: drop-shadow(5px 0px 15px rgba(0, 0, 0, 0.712));
+    transition-property: filter;
+    transition-duration: 0.2s;
+    transition-timing-function: ease;
+
+}
+
+.adjust1{
+    width: fit-content;
+    height: 95vh;
+    display: flex;
+    justify-content: space-around;
+    pointer-events: all;
+}
+
+
+#supp{
+    position: relative;
+    pointer-events: all;
+    width: fit-content;
+    filter: drop-shadow(0px 0px 0px rgba(0, 0, 0, 0));
+    transition: filter 0.2s ease;
+    scale: 1;
+    transition:scale 0.2s ease ;
+    margin: auto;
+    margin-top: 80px;
+    border-radius: 60px;
+}
+
+#supp:hover{
+    filter: drop-shadow(5px 0px 20px rgba(0, 0, 0, 0.712)); 
+    scale: 1.2;
+}
+
+#harmbig{
+    pointer-events: all;
+    margin-top: 80px;
+    height: fit-content;
+    width: 100%;
+    display: flex;
+    padding-left: 6vw;
+    justify-content: space-around;
+}
+
+#harmbig img{
+    filter: drop-shadow(0px 0px 0px rgba(0, 0, 0, 0));
+    transition: filter 0.2s ease;
+    scale: 1;
+    transition:scale 0.2s ease ;
+    margin-top: -100px;
+
+}
+
+
+
+.harmcards{
+    pointer-events: all;
+    width:100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+#harmcard{
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#harmcard img{
+    pointer-events: all;
+    width: 22vw;
+
+
+    margin-bottom: 16px;
+    filter: drop-shadow(0px 0px 0px rgba(0, 0, 0, 0));
+    transition: filter 0.2s ease;
+}
+
+#harmcard h5,h6{
+    font-family:sans-serif;
+    letter-spacing: 0vh;
+    margin: auto 0;
+    margin-left: 0.7vh;
+    margin-top: 0.9vh;
+    font-weight: 700;
+
+}
+#harmcard button{
+    width: fit-content;
+    margin: auto;
+    margin-top: 6px;
+    color: white;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: 700;
+    border: none;
+    background-color: #0f1114c8;
+}
+
+#harmcard img:hover{  
+    filter: drop-shadow(5px 0px 15px rgba(0, 0, 0, 0.712));
+    transition-property: filter;
+    transition-duration: 0.2s;
+    transition-timing-function: ease;
+
+}
+
+#bottom{
+    justify-content: space-between;
+    pointer-events: all;
+    width: 100%;
+    height: 30vh;
+    background-color:#0f1114c8 ;
+    margin-top: 50px;
+    display: flex;
+    padding: 3vw 7vw;
+
+}
+
+#inc1{
+    display: flex;
+    margin-top: 2vhs;
+}
+
+#leftone{
+    pointer-events: all;
+    display: flex;
+    flex-direction: column;
+}
+
+#leftimag img{
+    pointer-events: all;
+    margin-right: 3vw;
+    height: 110px;
+}
+
+#rightone{
+    margin-right: 0px;
+    display: flex;
+    flex-direction: column;
+    align-items:end;
+}
+
+#rightone a{
+    text-decoration: none;
+    color: white;
+}
+
+#rightone img{
+    pointer-events: all;
+    height: 40px;
+    margin-bottom: 3px;
+}
+
+#leftone a{
+    line-height: 2vw;
+    text-align: left;
+    text-decoration: none;
+    color: white;
+}
+
+
+@media(max-width:764px) {
+    .hideon {
+        display: none;
+
+    }
+
+
+}
+
+@media(max-width:1000px) {
+    #heroleft {
+        margin-top: 35px;
+    }
+
+    #heroright #imagediv {
+        width: 200%;
+    }
+
+}
+
+@media(min-width:764px) {
+    .open {
+        display: none;
+    }
+
+
+
+}

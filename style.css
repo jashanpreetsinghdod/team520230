@@ -1,0 +1,412 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "gilroy";
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+
+#main {
+    width: 100%;
+    height: 100vh;
+}
+
+#back {
+    width: 100%;
+    height: 100vh;
+}
+
+#top {
+    pointer-events: none;
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+}
+
+#workingarea {
+    position: relative;
+    margin: auto 0;
+    width: 80%;
+    max-width: 1920px;
+    height: 100vh;
+    margin: auto;
+}
+
+#navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 10px 0;
+
+}
+
+#navleft img {
+    cursor: pointer;
+    pointer-events: all;
+    height: 110px;
+}
+
+#navleft,
+#navright {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+
+
+}
+
+#navbar #anchorr {
+    pointer-events: all;
+    text-decoration: none;
+    font-family: "gilroy";
+    font-weight: 600;
+    color: white;
+    font-size: 13px;
+    /* background-color: aliceblue; */
+
+    backdrop-filter: blur(40px);
+    padding: 6px 6px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 55px black;
+
+
+}
+
+#navright i {
+    cursor: pointer;
+    pointer-events: all;
+    font-size: 30px;
+    color: white;
+}
+
+
+
+
+.closes:hover {
+    cursor: pointer;
+}
+
+#sidebar img {
+    border-radius: 50%;
+    width: 20%;
+    margin-top: 20px;
+    margin-bottom: 15px;
+}
+
+#sidebar {
+    pointer-events: all;
+    z-index: 999;
+    position: fixed;
+    height: 100vh;
+    width: 40%;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    top: 0;
+    right: 0;
+    background-color: rgba(255, 255, 255, 0.651);
+    backdrop-filter: blur(10px);
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+    box-shadow: -10px 0px 25px rgb(0, 0, 0);
+    animation-name: jashan;
+    animation-duration: 0.4s;
+
+}
+
+@keyframes jashan {
+    from {
+        right: -40%;
+    }
+
+    to {
+        right: 0
+    }
+}
+
+
+
+#sidebar #used {
+    position: relative;
+    width: 100%;
+    color: black;
+    text-decoration: none;
+    padding: 20px 0px;
+    font-size: 18px;
+    border-radius: 5px;
+    font-weight: 700;
+}
+
+#sidebar a:hover {
+    background-color: rgba(0, 0, 0, 0.074);
+    box-shadow: 0px 0px 100px rgba(0, 0, 0, 0.378);
+    transition-property: box-shadow, background-color;
+    transition-duration: 0.5s;
+    transition-timing-function: ease-in-out;
+
+
+}
+
+.open {
+    color: white;
+    background-color: rgba(255, 255, 255, 0.168);
+    pointer-events: all;
+    /* background: none; */
+    border: none;
+    font-weight: 900;
+    border-radius: 8px;
+    padding: 0px 0px;
+}
+
+.closes {
+    color: white;
+    background-color: rgba(255, 255, 255, 0.168);
+    pointer-events: all;
+    /* background: none; */
+    border: none;
+    font-weight: 900;
+    border-radius: 8px;
+    padding: 0px 0px;
+    margin-top: 18px;
+    align-self: first baseline;
+    margin-left: 18px;
+}
+
+.open:hover {
+    cursor: pointer;
+}
+
+#hero {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translate(0%, -50%);
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+#heroleft {
+    min-width: 50%;
+}
+
+#heroleft .elem {
+    position: relative;
+    overflow: hidden;
+    height: 9vw;
+}
+
+#heroleft .elem h1:nth-child(1) {
+    top: 0;
+}
+
+#heroleft .elem h1 {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    line-height: .9;
+    font-family: "kajiro";
+    color: white;
+    font-weight: 100;
+    font-size: 11vw;
+}
+
+#heroleft button {
+    pointer-events: all;
+    padding: .3vw 2vw;
+    font-size: 3.5vw;
+    margin-top: 2vw;
+    font-family: "kajiro";
+
+}
+
+#heroright {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    width: 20%;
+    color: whitesmoke;
+
+
+}
+
+#heroright p {
+    text-align: right;
+    font-size: 15px;
+    font-family: "gilroy";
+    font-weight: 700;
+    /* background-color: rgba(0, 0, 0, 0.69); */
+    backdrop-filter: blur(30px);
+    padding: 5px 5px;
+    border-radius: 15px;
+    box-shadow: 0px 0px 100px rgba(0, 0, 0, 0.262);
+}
+
+#heroright #imagediv {
+
+    width: 150%;
+    height: 170px;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    background-image: url(shotgun-body-type-electric-guitar-upscaled.jpg);
+    background-size: cover;
+    background-position: center;
+    border-radius: 30px;
+    box-shadow: 0px 0px 30px black;
+}
+
+#heroright p:nth-child(3) {
+    margin-bottom: 100px;
+}
+
+#back img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+@media(max-width:1000px) {
+    .hideon {
+        display: none;
+
+    }
+
+    /* #heroright p:nth-child(4) {
+        width: 250%;
+    }
+
+    #heroright p:nth-child(3) {
+        width: 190%;
+    }
+
+    #heroright p:nth-child(1) {
+        width: 250%;
+    }
+
+    #heroright #imagediv {
+        width: 200%;
+    } */
+
+}
+
+@media(min-width:1000px) {
+    #heroleft,#heroright {
+        margin-top: 5vw;
+    }
+
+    #heroright #imagediv {
+        width: 200%;
+    }
+
+}
+
+@media(min-width:1024px) {
+    .open {
+        display: none;
+    }
+}
+
+@media(max-width:1000px) {
+    #hero {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        /* align-items: center; */
+        justify-content: space-between;
+        margin-top: 4vh;
+    }
+
+    #heroleft {
+        width: 100%;
+
+
+
+
+    }
+
+    #heroleft .elem {
+        height: 14vw;
+
+    }
+
+    #heroleft .elem h1 {
+        margin-left: 5vw;
+        font-size: 18vw;
+    }
+
+    #heroleft button {
+        margin-left: 22vw;
+        margin-bottom: 30px;
+    }
+
+    #heroright {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+    }
+
+    #heroright #imagediv {
+        display: none;
+    }
+
+    #heroright p:nth-child(3) {
+        margin-bottom: 5px;
+    }
+}
+
+@media(max-width:412px) {
+    #hero {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        /* align-items: center; */
+        justify-content: space-between;
+        margin-top: -50px;
+    
+    }
+
+    #heroleft {
+        width: 100%;
+    }
+
+    #heroleft .elem {
+        height: 14vw;
+
+    }
+
+    #heroleft .elem h1 {
+        margin-left: 5vw;
+        font-size: 18vw;
+    }
+
+    #heroleft button {
+        margin-left: 22vw;
+        margin-bottom: 30px;
+    }
+
+    #heroright {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+    }
+
+    #heroright #imagediv {
+        display: none;
+    }
+
+    #heroright p:nth-child(3) {
+        margin-bottom: 5px;
+    }
+}
